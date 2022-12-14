@@ -45,17 +45,11 @@
         <nav class="nav-bar">
             <ul>
 
+                 @foreach($links as $link)
                 <li>
-                    <a href="{{ route('home') }}"> Home</a>
+                    <a href="{{ route($link['href']) }}"> {{$link['name']}} </a>
                 </li>
-
-                <li>
-                    <a href="{{ route('about') }}"> About</a>
-                </li>
-                
-                <li>
-                    <a href="{{ route('contact-us') }}"> Contact-us</a>
-                </li>
+                @endforeach
             </ul>
         </nav>
     </header>

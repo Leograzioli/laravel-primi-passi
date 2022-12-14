@@ -15,6 +15,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
+            "links" => [
+                [
+                    "name" => "Home",
+                    "href" => "home"
+                ],
+                [
+                    "name" => "About",
+                    "href" => "about"
+                ],
+                [
+                    "name" => "Contact-us",
+                    "href" => "contact"
+                ],
+            ],
             "greeting" => "my first laravel page :)"
     ];
     return view('home', $data);
@@ -32,4 +46,4 @@ Route::get('/contact-us', function () {
         "greeting" => "my third laravel page :)"
 ];
     return view('contact-us', $data);
-})->name("contact-us");
+})->name("contact");
