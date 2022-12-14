@@ -14,5 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    $data = [
+            "greeting" => "my first laravel page :)"
+    ];
+    return view('home', $data);
+})->name("home");
+
+Route::get('/about-us', function () {
+    $data = [
+        "greeting" => "my second laravel page :)"
+];
+    return view('about', $data );
+})->name("about");
+
+Route::get('/contact-us', function () {
+    $data = [
+        "greeting" => "my third laravel page :)"
+];
+    return view('contact-us', $data);
+})->name("contact-us");
